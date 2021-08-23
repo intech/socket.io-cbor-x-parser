@@ -1,0 +1,38 @@
+{
+  "name": "socket.io-cbor-x-parser",
+  "version": "1.0.0",
+  "description": "socket.io parser based on cbor-x",
+  "main": "index",
+  "dependencies": {
+    "component-emitter": "^1.3.0",
+    "socket.io-parser": "^4.0.4",
+    "cbor-x": "^0.8.3"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "expect.js": "^0.3.1",
+    "mocha": "^9.1.0",
+    "prettier": "^2.3.2",
+    "socket.io": "^4.1.3",
+    "socket.io-client": "^4.1.3",
+    "socket.io-msgpack-parser": "^3.0.1"
+  },
+  "scripts": {
+    "format:check": "prettier --check 'index.js' 'test/**/*.js'",
+    "format:fix": "prettier --write 'index.js' 'test/**/*.js'",
+    "test": "npm run format:check && mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intech/socket.io-cbor-x-parser.git"
+  },
+  "author": "Ivan Zhuravlev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intech/socket.io-cbor-x-parser/issues"
+  },
+  "homepage": "https://github.com/intech/socket.io-cbor-x-parser#readme",
+  "files": [
+    "index.js"
+  ]
+}
