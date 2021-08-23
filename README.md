@@ -33,16 +33,13 @@ socket.on('connect', () => {
 ```
 
 ### Benchmarks
-```coffeescript
-cbor-x: small json parse x 43,066 ops/sec ±3.39% (77 runs sampled)
-msgpack: small json parse x 31,431 ops/sec ±4.18% (52 runs sampled)
-cbor-x: big json parse x 1,280 ops/sec ±2.11% (84 runs sampled)
-msgpack: big json parse x 521 ops/sec ±1.60% (83 runs sampled)
-cbor-x: json with small binary parse x 48,137 ops/sec ±3.10% (78 runs sampled)
-msgpack: json with small binary parse x 42,144 ops/sec ±2.74% (71 runs sampled)
-cbor-x: json with big binary parse x 1,240 ops/sec ±1.38% (85 runs sampled)
-msgpack: json with big binary parse x 514 ops/sec ±1.90% (84 runs sampled)
-Fastest is cbor-x: json with small binary parse
-```
+
+| Test                          | MsgPack (Notepack.io)                   | CBOR-X                                  |
+|-------------------------------| --------------------------------------- | --------------------------------------- |
+| small json parse              | 31,431 ops/sec ±4.18% (52 runs sampled) | **43,066 ops/sec ±3.39% (77 runs sampled)** |
+| big json parse                | 521 ops/sec ±1.60% (83 runs sampled)    | 1,280 ops/sec ±2.11% (84 runs sampled)  |
+| json with small binary parse  | 42,144 ops/sec ±2.74% (71 runs sampled) | 48,137 ops/sec ±3.10% (78 runs sampled) |
+| json with big binary parse    | 514 ops/sec ±1.90% (84 runs sampled)    | 1,240 ops/sec ±1.38% (85 runs sampled)  |
+
 
 Benchmark source [here](https://github.com/intech/socket.io-cbor-x-parser/tree/master/bench).
