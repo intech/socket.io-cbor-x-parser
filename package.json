@@ -1,6 +1,6 @@
 {
   "name": "socket.io-cbor-x-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "socket.io parser based on cbor-x",
   "main": "index",
   "dependencies": {
