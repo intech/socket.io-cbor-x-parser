@@ -17,6 +17,7 @@ class Decoder extends Emitter {
    * Receive a chunk (string or buffer) and optionally emit a "decoded" event with the reconstructed packet
    */
   add(chunk) {
+    if(!ArrayBuffer.isView(chunk)) chunk = Buffer.from(new Uint8Array(chunk));
     const packet = decode(chunk);
     if (this.isPacketValid(packet)) {
       this.emit("decoded", packet);
