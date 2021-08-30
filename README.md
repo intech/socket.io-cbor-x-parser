@@ -2,8 +2,6 @@
 
 An alternative to the default [socket.io-parser](https://github.com/socketio/socket.io-parser), encoding and decoding packets with [cbor-x](https://github.com/kriszyp/cbor-x).
 
-With that parser, the browser build will be a bit heavier (an additional 7.5 KB minified, 3.0 KB gzipped), but each message will be smaller (sent as binary).
-
 Please note that you MUST use the parser on both sides (server & client).
 
 See also:

@@ -1,6 +1,6 @@
 {
   "name": "socket.io-cbor-x-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "socket.io parser based on cbor-x",
   "main": "index",
   "dependencies": {
@@ -14,9 +14,9 @@
     "expect.js": "^0.3.1",
     "mocha": "^9.1.0",
     "prettier": "^2.3.2",
-    "socket.io": "^4.1.3",
+    "socket.io": "^4.2.0",
     "socket.io-browsers": "^1.0.4",
-    "socket.io-client": "^4.1.3",
+    "socket.io-client": "^4.2.0",
     "socket.io-msgpack-parser": "^3.0.1",
     "zuul": "^3.12.0"
   },
@@ -24,7 +24,8 @@
     "format:check": "prettier --check 'index.js' 'test/**/*.js'",
     "format:fix": "prettier --write 'index.js' 'test/**/*.js'",
     "test": "npm run format:check && mocha test/index.js",
-    "test:browser": "zuul test/browser.js --no-coverage"
+    "test:browser": "zuul test/browser.js --no-coverage",
+    "bench": "node bench/index.js"
   },
   "repository": {
     "type": "git",
